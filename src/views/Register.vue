@@ -1,3 +1,18 @@
+<script setup></script>
+
 <template>
-  <div>Register Page</div>
+  <div class="w-full min-h-screen bg-gradient-to-r from-sky-500 to-indigo-500 flex justify-center items-center px-8">
+    <div class="w-[32rem] h-auto px-8 py-6 bg-white rounded space-y-6">
+      <div class="flex flex-col justify-start items-center space-y-3">
+        <h1 class="text-2xl font-bold">Ro'yhatdan o'tish</h1>
+        <p>Oldin ro'yhatdan o'tganmisiz? <RouterLink to="/login" class="text-blue-500 underline cursor-pointer">Kirish</RouterLink></p>
+      </div>
+      <form class="flex flex-col space-y-3">
+        <input class="w-full h-12 px-6 border rounded outline-none focus:border-blue-500" type="text" placeholder="Email">
+        <input class="w-full h-12 px-6 border rounded outline-none focus:border-blue-500" type="text" placeholder="Parol">
+        <input class="w-full h-12 px-6 border rounded outline-none focus:border-blue-500" type="text" placeholder="Parolni qayta kiriting">
+        <button class="w-full h-12 mx-auto px-0 bg-gradient-to-r from-sky-500 to-indigo-500 text-white rounded text-xl">Ro'yhatdan o'tish</button>
+      </form>
+    </div>
+  </div>
 </template>
