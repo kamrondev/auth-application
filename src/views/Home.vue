@@ -1,8 +1,17 @@
 <script setup>
 import { useUsersStore } from '../stores';
 import { useAuthStore } from '../stores';
+import { onBeforeMount, onMounted, ref } from 'vue';
+import { useRouter } from 'vue-router';
 const usersStore = useUsersStore();
 const authStore = useAuthStore();
+const router = useRouter();
+
+onBeforeMount(() => {
+  if (!usersStore.$state.isAuthenticated) {
+    router.push('/login');
+  }
+})
 
 const logout = async () => {
   await authStore.logout();
